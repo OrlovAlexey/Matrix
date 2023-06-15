@@ -1,3 +1,4 @@
+#pragma once
 #include <cstdlib>
 
 
@@ -14,7 +15,7 @@ struct Finite {
     Finite<N> operator+= (Finite<N> a);
     Finite<N> operator-= (Finite<N> a);
     Finite<N> operator*= (Finite<N> a);
-    explicit operator long long();
+    operator long long();
 };
 
 template <int N>

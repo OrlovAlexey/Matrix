@@ -1,3 +1,4 @@
+#pragma once
 #include "Matrix.hpp"
 
 
@@ -9,7 +10,7 @@ struct Matrix<N,N,Field>{
         for (size_t i = 0; i < N; ++i) {
             mat[i].resize(N);
             for (size_t j = 0; j < N; ++j) {
-                mat[i][j] = ((i == j) ? 1 : 0);
+                mat[i][j] = (Field)0;
             }
         }
     }
@@ -22,6 +23,17 @@ struct Matrix<N,N,Field>{
                 mat[i][j] = vec[i][j];
             }
         }
+    }
+    static Matrix<N, N, Field> unity() {
+        Matrix<N, N, Field> m = Matrix<N, N, Field>();
+        m.mat.resize(N);
+        for (size_t i = 0; i < N; ++i) {
+            m.mat[i].resize(N);
+            for (size_t j = 0; j < N; ++j) {
+                m.mat[i][j] = ((i == j) ? 1 : 0);
+            }
+        }
+        return m;
     }
     Matrix<N, N, Field> operator+= (const Matrix<N, N, Field>& m) {
         for (size_t i = 0; i < N; ++i) {

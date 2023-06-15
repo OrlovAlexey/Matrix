@@ -1,3 +1,4 @@
+#pragma once
 #include "../BigInteger/BigInteger.h"
 
 

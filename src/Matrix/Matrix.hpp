@@ -1,9 +1,10 @@
+#pragma once
 #include <iostream>
 #include <cassert>
 #include <string>
 #include <vector>
 
-#include "../../Rational/Rational.h"
+#include "../Rational/Rational.h"
 
 using std::string;
 using std::cin;
@@ -194,8 +195,8 @@ istream& operator>> (istream& in, Matrix<N, M, Field>& matrix) {
 
 template <unsigned N, unsigned M, typename Field = Rational>
 ostream& operator<< (ostream& out, const Matrix<N, M, Field>& matrix) {
-    for (int i = 0; i < N; ++i) {
-        for (int j = 0; j < M; ++j) {
+    for (unsigned int i = 0; i < N; ++i) {
+        for (unsigned int j = 0; j < M; ++j) {
             out << matrix.mat[i][j] << " ";
         }
         cout << '\n';
