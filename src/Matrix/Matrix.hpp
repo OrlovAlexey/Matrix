@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-#include "../Rational/Rational.h"
+#include "../../Rational/Rational.h"
 
 using std::string;
 using std::cin;

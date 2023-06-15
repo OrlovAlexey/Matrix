@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Matrix/SquareMatrix.h"
+#include "Matrix/SquareMatrix.hpp"
 
 
 BigInteger bin_pow(BigInteger a, BigInteger degree) {
