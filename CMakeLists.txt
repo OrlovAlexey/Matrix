@@ -9,10 +9,10 @@ add_subdirectory(
 )
 
 # Main target
-add_executable(matrix src/BigInteger/BigInteger.cpp src/BigInteger/BigInteger.h src/Rational/Rational.cpp src/Rational/Rational.h src/Finite/Finite.cpp src/Finite/Finite.h src/Matrix/Matrix.hpp src/Matrix/SquareMatrix.hpp main.cpp)
+add_executable(matrix src/BigInteger/BigInteger.cpp src/BigInteger/BigInteger.h src/Rational/Rational.cpp src/Rational/Rational.h src/Finite/Finite.hpp src/Matrix/Matrix.hpp src/Matrix/SquareMatrix.hpp main.cpp )
 
 # Test target
-add_executable(test_matrix tests/matrix_test.cpp)
+add_executable(test_matrix src/BigInteger/BigInteger.cpp src/BigInteger/BigInteger.h src/Rational/Rational.cpp src/Rational/Rational.h src/Finite/Finite.hpp src/Matrix/Matrix.hpp src/Matrix/SquareMatrix.hpp tests/matrix_test.cpp)
 
 target_include_directories(
         test_matrix PRIVATE
